@@ -13,7 +13,7 @@ pwd()
 # Create template for package
 t = Template(; 
     user="kgovernor",
-    dir=use_dir,
+    dir=".",
     authors="Kyel Governor",
 )
 

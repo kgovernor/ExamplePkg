@@ -3,6 +3,24 @@ uuid = "a5f3c3fb-6ca6-4135-849d-a2d66d4f71a9"
 authors = ["Kyel Governor"]
 version = "0.1.0"
 
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+LinearSolve = "7ed4a6bd-45f5-4d41-b270-4a48e9bafcae"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+ReadStat = "d71aba96-b539-5138-91ee-935c3ee1374c"
+ShiftedArrays = "1277b4bf-5013-50f5-be3d-901d8477a67a"
+StatFiles = "1463e38c-9381-5320-bcd4-4134955f093a"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+StatsModels = "3eaba693-59b7-5ba5-a881-562e759f1c8d"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
 [compat]
 julia = "1"
 
