@@ -24,6 +24,6 @@ dependencies= [
 
 dependencies = unique([dependencies]) # Just in case I have duplicate entries
 for dep in dependencies
-    Pkg.add(dep, preserve=Pkg.PRESERVE_DIRECT) # To preserve the version of the dependency installed when updates are made to this package
+    Pkg.add(dep)#, preserve=Pkg.PRESERVE_DIRECT) # To preserve the version of the dependency installed when updates are made to this package
 end
 
