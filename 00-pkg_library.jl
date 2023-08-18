@@ -47,14 +47,22 @@ data_pkgs = [
 
 # For mathematical analysis
 analysis_pkgs = [
+    # Interval Arithmetic
+    "IntervalArithmetic", # To do math on intervals
+    # Integration and Interpolation
     "QuadGK", # Numerical Integration
     "FastGaussQuadrature", # Numerical Integration
     "Interpolations", # For interpolating data points
+    "TaylorModels" # For Taylor Series Expansion
+    # Differentiation and Root finding
     "ForwardDiff", # Numerical Differentiation
     "Zygote", # Numerical Differentiation
     "Roots", # Root finding packages
+    "IntervalRootFinding", # Root finding using intervals
+    # Solving Systems
     "LinearSolve", # Solve system of linear equations
     "NLSolve", # Solve system of non-linear equations
+    # Optimization
     "JuMP", # Numerical Optimizer
     "Ipopt", # Numerical Optimizer
     "Optim", # Numerical Optimizer

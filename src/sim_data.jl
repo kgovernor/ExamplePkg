@@ -21,12 +21,12 @@ Returns a `NamedTuple` containing a `DataFrame` of a panel dataset of `N` firms 
 """
 function sim_data(
     # arguments
-    N, T; 
+    N, T; # N is number of firms, T is time periods
     # optional arguments
     num_inputs = 2, 
     num_indp_inputs = 1,  
     input_names = ["K", "L"], 
-    prod_params = [0.1, 0.25], 
+    prod_params = [0.1, 0.9], 
     cost_params = [0, 0.15], 
     omega_params = [0, 0.8, 0, 0], 
     indp_inputs_params = [1], 

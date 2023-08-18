@@ -1,7 +1,7 @@
 ### Installation of dependencies to ExamplePkg
 using Pkg
 
-Pkg.activate(".")
+Pkg.activate(".") # Activate the package environment
 
 dependencies= [
     "Distributions",
