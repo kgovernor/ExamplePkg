@@ -11,11 +11,11 @@ function monopsony_classifier(
     )
 
     # Sim data for training
-    ytrain, xtrain = nn_data(Ntrain, T, train_pp, wtrain_μ, wtrain_σ, marg_err_p)
+    ytrain, xtrain = nn_data(Ntrain, T, train_pp, wtrain_μ, wtrain_σ, marg_err_p=marg_err_p)
     println("---Training data complete\n")
 
     # Sim data for testing
-    ytest, xtest = nn_data(Ntest, T, test_pp, wtest_μ, wtest_σ, marg_err_p)
+    ytest, xtest = nn_data(Ntest, T, test_pp, wtest_μ, wtest_σ, marg_err_p=marg_err_p)
     println("---Test data complete\n")
 
     # Build network
