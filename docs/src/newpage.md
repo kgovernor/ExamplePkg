@@ -1,5 +1,3 @@
-# Install
+# Another Page
 
-```julia-repl
-pkg> add https https://github.com/kgovernor/ExamplePkg.jl
-```
+Coming soon...
