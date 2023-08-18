@@ -10,14 +10,20 @@ dev_pkgs = [
 # Interactive Notebooks
 notebook_pkgs = [
     "Pluto", # Reactive programming environment. Like Jupyter Notebook but better
+    "PlutoUI",
     "IJulia", # For Jupyter Notebook
 ]
+
+plots_pkgs = [
+    "Plots", # To create graphs
+    "PlotlyJS", # Interactive graphs
+    "StatsPlots" # For more sophisticated plots
+    ]
 
 # Used often
 essential_pkgs = [
     "LinearAlgebra", # For basic and advanced algebra operations e.g. finding determinant
     "Statistics", # Statistical package
-    "Plots", # To create graphs
     "Printf", # For making formatted strings
     "Random", # For generation random numbers
     "Distributions", # For generating data distributions e.g. Normal

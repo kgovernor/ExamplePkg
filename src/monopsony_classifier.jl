@@ -70,7 +70,7 @@ function monopsony_classifier(
 end
 
 # Create data for nn
-function nn_data(N, T, pp, w_μ, w_σ, marg_err_p)
+function nn_data(N, T, pp, w_μ, w_σ; marg_err_p=0.01)
     df = sim_data(N, T, prod_params=pp).df
 
     y = zeros(1, T+1, N)
