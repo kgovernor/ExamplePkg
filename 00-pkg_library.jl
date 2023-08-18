@@ -10,7 +10,7 @@ dev_pkgs = [
 # Interactive Notebooks
 notebook_pkgs = [
     "Pluto", # Reactive programming environment. Like Jupyter Notebook but better
-    "PlutoUI",
+    "PlutoUI", # For adding interactivity to Julia, Pluto
     "IJulia", # For Jupyter Notebook
 ]
 
@@ -63,7 +63,7 @@ analysis_pkgs = [
 
 # For building neural networks
 nn_pkgs = [
-    "CUDA", # useful for running Flux faster
+    "CUDA", # For GPU acceleration
     "Flux" # For building neural networks
 ]
 
