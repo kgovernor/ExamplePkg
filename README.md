@@ -12,38 +12,38 @@ In it you will find:
 ## Helpful Links
 
 ### QuantEcon - Overall Source for Julia Economics
-[QuantEcon Julia]{https://julia.quantecon.org/intro.html} is generally useful for certain types of problems, however, it takes some time to navigate the material.
+[QuantEcon Julia](https://julia.quantecon.org/intro.html) is generally useful for certain types of problems, however, it takes some time to navigate the material.
 
 ### Setting up Julia
-[Install]{https://julialang.org/downloads/}
+[Install](https://julialang.org/downloads/)
 
 #### VS Code
-[Video]{https://www.youtube.com/watch?v=lO2vxgrcKd4} <br>
-[Tutorial]{https://www.julia-vscode.org/docs/dev/gettingstarted/}
+[Video](https://www.youtube.com/watch?v=lO2vxgrcKd4) <br>
+[Tutorial](https://www.julia-vscode.org/docs/dev/gettingstarted/)
 
 #### Jupyter
-[Video]{https://www.youtube.com/watch?v=81DRruCIO34}
+[Video](https://www.youtube.com/watch?v=81DRruCIO34)
 
 #### Pluto
-[Pluto - a reactive programming environment]{https://plutojl.org/}
+[Pluto - a reactive programming environment](https://plutojl.org/)
 
 ### Create Package
-[Video]{https://www.youtube.com/watch?v=QVmU29rCjaA} <br>
-[PkgTemplates.jl]{https://juliaci.github.io/PkgTemplates.jl/stable/user/} <br>
-[Alternative Tutorial]{https://blog.jcharistech.com/2021/09/27/how-to-develop-and-publish-julia-packages-for-beginners/}
+[Video](https://www.youtube.com/watch?v=QVmU29rCjaA) <br>
+[PkgTemplates.jl](https://juliaci.github.io/PkgTemplates.jl/stable/user/) <br>
+[Alternative Tutorial](https://blog.jcharistech.com/2021/09/27/how-to-develop-and-publish-julia-packages-for-beginners/)
 
 ### Documentation
-[Video]{https://www.youtube.com/watch?v=e8RY83erZFs} <br>
-[DocumenterTools.jl]{https://documenter.juliadocs.org/stable/lib/public/#DocumenterTools.generate} initializes the folder template for documentation <br>
-[Documenter.jl]{https://documenter.juliadocs.org/stable/man/guide/}. Heads up, can take a bit of troubleshooting to get the Documentation onto GitHub-Pages. Unfortunately, I forgot how I troubleshooted this, but I recall using keys generated from DocumenterTools and adding to the git settings... You'd need to go through the Documenter.jl package thoroughly and watch the video. <br>
-[Docstrings]{https://www.youtube.com/watch?v=m3c8Z6HBn48}. Also see Documenter.jl.
+[Video](https://www.youtube.com/watch?v=e8RY83erZFs) <br>
+[DocumenterTools.jl](https://documenter.juliadocs.org/stable/lib/public/#DocumenterTools.generate) initializes the folder template for documentation <br>
+[Documenter.jl](https://documenter.juliadocs.org/stable/man/guide/). Heads up, can take a bit of troubleshooting to get the Documentation onto GitHub-Pages. Unfortunately, I forgot how I troubleshooted this, but I recall using keys generated from DocumenterTools and adding to the git settings... You'd need to go through the Documenter.jl package thoroughly and watch the video. <br>
+[Docstrings](https://www.youtube.com/watch?v=m3c8Z6HBn48). Also see Documenter.jl.
 
 ### Data Frame Manipulation
-[DataFrames.jl]{https://dataframes.juliadata.org/stable/man/querying_frameworks/} <br>
-[Lagging DataFrames in Julia using ShiftedArrays.jl]{https://bkamins.github.io/julialang/2022/09/23/lagging.html}
+[DataFrames.jl](https://dataframes.juliadata.org/stable/man/querying_frameworks/) <br>
+[Lagging DataFrames in Julia using ShiftedArrays.jl](https://bkamins.github.io/julialang/2022/09/23/lagging.html)
 
 ### Optimizing Performance in Julia
-[Julia Performance Tips]{https://docs.julialang.org/en/v1/manual/performance-tips/} <br>
-[Optimizing Code: A practical guide]{https://viralinstruction.com/posts/optimise/#cut_down_on_allocations} <br>
-[More Performance Tips]{https://www.juliafordatascience.com/performance-tips/} <br>
-[Unleashing Code Potential]{https://marketsplash.com/tutorials/julia/julia-performance/#google_vignette}
+[Julia Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/) <br>
+[Optimizing Code: A practical guide](https://viralinstruction.com/posts/optimise/#cut_down_on_allocations) <br>
+[More Performance Tips](https://www.juliafordatascience.com/performance-tips/) <br>
+[Unleashing Code Potential](https://marketsplash.com/tutorials/julia/julia-performance/#google_vignette)
