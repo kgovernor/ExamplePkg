@@ -28,24 +28,24 @@ function monopsony_classifier(
     dense_3L(in, L1, L2, out) = Chain(Dense(in => L1), Dense(L1 => L2, σ), Dense(L2 => out, σ))
     model = dense_3L(dim_input, Q1, Q2, dim_output)
 
-    # Loss function - crossentropy
+    # Loss function - binary crossentropy
     loss(model, x, y) = Flux.logitbinarycrossentropy(model(x), y)
     println("Model 1: initial loss: ", loss(model, xtrain, ytrain))
 
     # Training
     println("---Starting training\n")
-    opt = Descent(0.2)
+    opt = Descent(0.2) # learning style of gradient descent and learning rate of 0.2
     data = [(xtrain, ytrain)]
-    Flux.train!(loss, model, data, opt)
+    Flux.train!(loss, model, data, opt) # train model
 
     println("Model 1: 1st loss: ", loss(model, xtrain, ytrain))
 
     losses = []
-    for epoch in 1:epochs
+    for epoch in 1:epochs # train model each epoch unless threshold is achieved
         training = false
         l1 = loss(model, xtrain, ytrain)
-        if l1 >= 1e-8
-            Flux.train!(loss, model, data, opt)
+        if abs(losses[-1] - l1) >= 1e-8 # keep training if change in loss is at least 1e-8 
+            Flux.train!(loss, model, data, opt) 
             push!(losses, l1)
             training = true
         end
@@ -65,28 +65,29 @@ function monopsony_classifier(
     perf1= loss(model, xtest, ytest)
     println("Performance:\n\t Model 1 - ", perf1)
 
-    return (mod = model, ytest = ytest, xtest = xtest, losses = losses)
+    return (mod = model, ytest = ytest, xtest = xtest, losses = losses) # return model, test data, and losses
     
 end
 
 # Create data for nn
 function nn_data(N, T, pp, w_μ, w_σ; marg_err_p=0.01)
-    df = sim_data(N, T, prod_params=pp).df
+    df = sim_data(N, T, prod_params=pp).df # based on Cobb-Douglas production function
 
-    y = zeros(1, T+1, N)
-    x = zeros(4, T+1, N)
+    y = zeros(1, T+1, N) # output - batch size T+1
+    x = zeros(4, T+1, N) # inputs - batch size T+1
     for i in 1:N
-        K = df[df.firm .== i, :].K
-        L = df[df.firm .== i, :].L
-        Y = df[df.firm .== i, :].Y
+        K = df[df.firm .== i, :].K # capital input
+        L = df[df.firm .== i, :].L # labor input
+        Y = df[df.firm .== i, :].Y # production output input
 
-        x[1,:,i] = log.(K)
-        x[2,:,i] = log.(L)
-        x[3,:,i] = log.(Y)
+        x[1,:,i] = log.(K) # log capital
+        x[2,:,i] = log.(L) # log labor
+        x[3,:,i] = log.(Y) # log production output
+
         # Sim wages for test
-        marg_L = log.(pp[2] .* (Y ./ L))
-        x[4,:,i] = rand.(Normal.(marg_L .+ w_μ, w_σ))
-        y[:,:,i] = marg_L .> (x[4,:,i] .* (1+marg_err_p))
+        marg_L = log.(pp[2] .* (Y ./ L)) # log of marginal product of labor for Cobb-Douglas production function 
+        x[4,:,i] = rand.(Normal.(marg_L .+ w_μ, w_σ)) # simulated wages 
+        y[:,:,i] = marg_L .> (x[4,:,i] .* (1+marg_err_p)) # binary output of monopsony power
     end
 
     return y, x

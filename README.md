@@ -7,7 +7,12 @@ In it you will find:
 - A package library
 - How to create a package
 - How to create documentation
+- Pluto Notebooks for examples of implementation of this package and other useful Julia examples
 - An example package, simulates firm data and analyzes firm labor monopsony power using a NN
+
+## ExamplePkg.jl
+
+This package simulates panel firm data of N firms over T time periods and analyzes firm labor monopsony power using a neural network. Recall that under perfect competition, firms will set the marginal product of labor to be equal to the real wage rate. If the real wage rate is below the marginal product of labor, then the firm is displaying some level of labor monopsony power. A neural network is developed to classify whether or not the firm has labor monopsony power, i.e., if firms are paying a real wage rate below the marginal product of labor. 
 
 ## Helpful Links
 
